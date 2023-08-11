@@ -13,18 +13,18 @@
 import requests
 import json
 
-URL = 'http://127.0.0.1:8000/appie/studentcreate/'
-def create_data():
-    data = {
-        'name':"Jung Kumar Mahishmati",
-        'roll':124,
-        'city':'Raja Pyuthan',
-    }
-    json_data = json.dumps(data)
-    response = requests.post(url = URL, data = json_data)
-    data = response.json()
-    print(data)
-# create_data()
+# URL = 'http://127.0.0.1:8000/appie/studentcreate/'
+# def create_data():
+#     data = {
+#         'name':"Jung Kumar Mahishmati",
+#         'roll':124,
+#         'city':'Raja Pyuthan',
+#     }
+#     json_data = json.dumps(data)
+#     response = requests.post(url = URL, data = json_data)
+#     data = response.json()
+#     print(data)
+# # create_data()
  
 
 
@@ -43,35 +43,36 @@ def get_data(id = None):
     data = response.json()
     print(data)
 # get_data()
+## pass with id or none
 
 def post_data():
     data = {
-        'name' : 'Mahishmati',
-        'roll' : 1000,
-        'city' : "Callifornia",
+        'name' : 'Bikash',
+        'roll' : 26,
+        'city' : "Lalitpur",
     }
     json_data = json.dumps(data)
     response = requests.post(url = url,data = json_data)
     data = response.json()
-# post_data()
+post_data()
 
 
 def update_data():
     data = {
         'id' : 3,
-        'name' : 'Harish',
-        'roll' : 1000,
-        'city' : 'Lalitjung',
+        'name' : 'Sabin Kumal',
+        'roll' : 24,
+        'city' : 'Kathmandy ',
     }
     json_data = json.dumps(data)
     response = requests.put(url = url,data = json_data)
     data = response.json()
     print(data)
-update_data()
+# update_data()
 
 def delete_data():
     data = {
-        'id' : 16,
+        'id' : 18,
  
     }
     json_data = json.dumps(data)
