@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from appie.models import Student
 from appie.validators import starts_with_r
-
+'''
 # class StudentSerializer(serializers.Serializer):
 #     # id = serializers.IntegerField()
 #     name = serializers.CharField(max_length = 55,validators = [starts_with_r])
@@ -32,7 +32,8 @@ from appie.validators import starts_with_r
     #     if nm.lower() == 'rohit' and ct.lower() != 'kannada':
     #         raise serializers.ValidationError('city must be Kannada.')
     #     return data
-    
+
+    '''
 ###Here starts with ModelSerializer concept
 class StudentSerializer(serializers.ModelSerializer):
     # name = serializers.CharField(read_only = True)
@@ -61,3 +62,5 @@ class StudentSerializer(serializers.ModelSerializer):
         if nm.lower() == 'anish' and ct.lower() != 'lalitpur':
             raise serializers.ValidationError('city must be Lalitpur.')
         return data
+
+##jumped into API view
